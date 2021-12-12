@@ -15,15 +15,21 @@
         <form> <!-- TODO: Set Action and Method Properties -->
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" required="required" minlength="2" maxlength="35">
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required="required" minlength="2" maxlength="35">
+                <label for="age">Your Age</label>
+                <span class="required-field">*</span>
+                <input type="number" name="age" id="age" min="21" max="120" required="required">
             </div>
             
             <fieldset>
                 <legend>Your Contact Info</legend>
                    
                 <label for="email">Your Email</label>
+                <span class="required-field">*</span>
                 <input type="text" id="email" name="email">
 
                 <label for="street">Your Street Address</label>
@@ -89,14 +95,17 @@
                 <input type="zip" id="zip" name="zip">
             </feildset>
             <fieldset>
-                <input type="radio" id="vegas" name="Las Vegas">
-                <label for="lasVegas">Las Vegas</label>
-                <br>
-                <input type="radio" id="LA" name="Los Angeles">
-                <label for="losAngeles">Los Angeles</label>
-                <br>
-                <input type="radio" id="japan" name="Japan">
-                <label for="japan">Japan</label>
+                <div>
+                    <input type="radio" id="vegas" name="Las Vegas">
+                    <label for="lasVegas">Las Vegas</label>
+                </div>
+                <div>
+                    <input type="radio" id="LA" name="Los Angeles">
+                    <label for="losAngeles">Los Angeles</label>
+                </div>
+                    <input type="radio" id="japan" name="Japan">
+                    <label for="japan">Japan</label>
+                </div>
             </fieldset>
             <fieldset>
                 <label for="color">Pick a Color</label>
@@ -104,11 +113,20 @@
             </fieldset>
             <fieldset>
                 <label for="addOns">Pick an add on</label>
-                <input type=""
+                <div>
+                   <input type="checkbox" id="hotTub" name="addOns">
+                   <label for="Hot Tub">Hot Tub</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="jetSkis" name="addOns">
+                    <label for="Jet Skis">Jet Skis</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="openBar" name="addOns">
+                    <label for="Open Bar">Open Bar</label>
+                </div>
             </fieldset>
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
-            
-            <!-- TODO: Submit Button -->
+            <input type="submit" value="Enter the Contest! Good Luck">
         </form>
     </main>
     <footer>
